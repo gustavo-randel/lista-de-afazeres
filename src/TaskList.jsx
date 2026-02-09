@@ -1,6 +1,7 @@
-import { TaskItem } from 'TaskItem'
+import TaskItem from 'TaskItem.jsx'
 
 function TaskList({todo, toggleTodo, deleteTodo}) {
+    return (
     <ul className="">
       {todo.length === 0 && "No tasks on your list!"}
       {todo.map (todo => {
@@ -12,6 +13,7 @@ function TaskList({todo, toggleTodo, deleteTodo}) {
         ></TaskItem>
       })}
     </ul>
+    )
 }
 
 export default TaskList 
