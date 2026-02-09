@@ -1,4 +1,4 @@
-import TaskItem from 'TaskItem.jsx'
+import TaskItem from './TaskItem.jsx'
 
 function TaskList({todo, toggleTodo, deleteTodo}) {
     return (
