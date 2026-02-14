@@ -1,7 +1,6 @@
 import NewTaskForm from './NewTaskForm.jsx'
 import TaskList from './TaskList.jsx'
 import { useEffect, useState } from 'react'
-import './App.css'
 
 function App() {
   const [todo, setTodo] = useState(() => {
