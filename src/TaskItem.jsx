@@ -1,6 +1,6 @@
 function TaskItem({completed, id, title, toggleTodo, deleteTodo}) {
     return (
-          <li>
+          <li className="task-item">
           <label>
           <input 
           type="checkbox" 
@@ -9,7 +9,7 @@ function TaskItem({completed, id, title, toggleTodo, deleteTodo}) {
           />
           {title}
           </label>
-          <button onClick={() => deleteTodo(id)} className="btn btn-danger"></button>
+          <button onClick={() => deleteTodo(id)} className="btn btn-danger">Delete</button>
           </li>
         )
 }

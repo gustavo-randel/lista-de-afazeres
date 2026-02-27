@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function NewTaskForm({onSubmit}) {
-    const [newItem, setNewItem] = useState('Give a name to your task')
+    const [newItem, setNewItem] = useState('')
     function handleSubmit(e) {
         if (newItem === '') return
         e.preventDefault()
@@ -17,6 +17,7 @@ function NewTaskForm({onSubmit}) {
         value={newItem} 
         type="text" 
         id="item" 
+        placeholder="Give a name to your new task!"
         />
       </div>
       <button className="btn">Add</button>

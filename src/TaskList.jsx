@@ -2,7 +2,7 @@ import TaskItem from './TaskItem.jsx'
 
 function TaskList({todo, toggleTodo, deleteTodo}) {
     return (
-    <ul className="">
+    <ul className="task-list">
       {todo.length === 0 && "No tasks on your list!"}
       {todo.map (todo => {
         return <TaskItem 
