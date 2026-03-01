@@ -37,14 +37,14 @@ h1 {
 
 .new-item-form label {
   font-size: 1.2rem;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 .new-item-form input {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -58,14 +58,29 @@ h1 {
   border-bottom: 1px solid #dbdadac5;
   margin: none;
   padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
 } 
+
 .task-item input {
   height: 1rem;
   width: 1rem;
   margin-right: 1rem;
-} .task-item input:focus {
+} .task-item input:focus, .task-item input:focus-visible, .task-item input:hover {
   text-decoration: line-through;  
   accent-color: #fa82f4;
+  outline: 2px solid #fa82f4;
+}
+
+.task-item input:checked {
+  accent-color: #fa82f4;
+}
+
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
 }
 
 .task-list {
@@ -79,6 +94,11 @@ h1 {
   padding: 0.4em .8em;
   font-size: .8em;
 }
+.btn-danger:hover {
+  border-color: #ff1717;
+  background-color: #ff17171e;
+  transition: border-color 0.25s, background-color 0.25s;
+}
 
 button {
   border-radius: 8px;
@@ -91,12 +111,12 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.add-btn:hover {
   border-color: #fa82f4;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.add-btn:focus,
+.add-btn:focus-visible {
+  outline: 3px solid #fa82f4;
 }
 
 @media (prefers-color-scheme: light) {
@@ -119,5 +139,8 @@ button:focus-visible {
   }
   .header {
     font-size: 2.4rem;
+  }
+  .root {
+    padding: 1rem;
   }
 }

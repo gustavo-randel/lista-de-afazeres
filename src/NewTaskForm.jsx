@@ -20,7 +20,7 @@ function NewTaskForm({onSubmit}) {
         id="item" 
         />
       </div>
-      <button className="btn">Add</button>
+      <button className="add-btn">Add</button>
     </form>
     )
 }
