@@ -10,7 +10,7 @@ function TaskItem({completed, id, title, toggleTodo, deleteTodo}) {
             {title}
             </label>
             <button onClick={() => deleteTodo(id)} className="btn btn-danger">Delete</button>
-          </li>
+          </li> 
         )
 }
 export default TaskItem

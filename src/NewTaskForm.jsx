@@ -3,8 +3,8 @@ import { useState } from "react"
 function NewTaskForm({onSubmit}) {
     const [newItem, setNewItem] = useState('')
     function handleSubmit(e) {
-        if (newItem === '') return
         e.preventDefault()
+        if (newItem === '') return
         onSubmit(newItem)
         setNewItem('')
     }
@@ -13,11 +13,11 @@ function NewTaskForm({onSubmit}) {
       <div className="form-row">
         <label htmlFor="item">New Item</label>
         <input 
-        onChange={e => setNewItem(e.target.value)}
         value={newItem} 
+        onChange={e => setNewItem(e.target.value)}
         type="text" 
-        id="item" 
         placeholder="Give a name to your new task!"
+        id="item" 
         />
       </div>
       <button className="btn">Add</button>

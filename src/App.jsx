@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [todo, setTodo] = useState(() => {
-    const localValue = localStorage.getItem('Itens')
+    const localValue = localStorage.getItem('Items')
     if (localValue == null) return []
+
     return JSON.parse(localValue)
   })
 
@@ -24,13 +25,14 @@ function App() {
         if (todo.id === id) {
           return {...todo, completed}
         }
+        return todo
       })
     })  }
 
   function deleteTodo(id) {
     setTodo(currentTodos => {
       return currentTodos.filter(todo => todo.id !== id)
-    })  }
+    })}
 
   return (
     <>

@@ -57,6 +57,7 @@ h1 {
   list-style: none;
   border-bottom: 1px solid #dbdadac5;
   margin: none;
+  padding: 1rem 0;
 } 
 .task-item input {
   height: 1rem;
@@ -105,5 +106,18 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-item-form {
+    gap: 1rem;
+  }
+  .new-item-form label {
+    font-size: 1rem;
+    padding-right: 1rem;
+  }
+  .header {
+    font-size: 2.4rem;
   }
 }
